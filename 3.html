@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1 ><strong>O seu número é </strong><span id="numero-titulo"></span></h1>
+        <div id="texto">texto</div>
+    </section>
+
+    <script>
+        
+        var num = prompt('Digite um numero:');
+        num = Number(num);
+        var numero = document.getElementById('numero-titulo');
+        var texo = document.getElementById('texto');
+        numero.innerHTML += `${num}`
+        texo.innerHTML = `<p>A raiz quadrada: ${Math.sqrt(num)}</p>`;
+        texo.innerHTML += `<p>Inteiro: ${Number.isInteger(num)}</p>`;
+        texo.innerHTML += `<p>NaN: ${Number.isNaN(num)}</p>`;
+        texo.innerHTML += `<p>Arredondando para baixo: ${Math.floor(num)}</p>`;
+        texo.innerHTML += `<p>Arredondando para cima: ${Math.ceil(num)}</p>`;
+        texo.innerHTML += `<p>Com duas casa decimais: ${num.toFixed(2)}</p>`;
+        
+        </script>
+</body>
+</html>
